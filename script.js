@@ -64,14 +64,13 @@ var playGame = function() {
         alert("Oh, no! You used up all your guesses! Refresh the page to try again!");
         return;
 
-    
     /* If players enter non-numbers or out of range numbers */
     } else {
         alert("Try an integer between 1 and 100, Smartass!");
         alert("Your wrong guess count: " + wrongGuesses + ". You now have " + guessesLeft() + " guesses left!");
     };
     
-    /* Allows players to guess again */
+    /* Allows players to guess again or quit the game */
     var playAgain = window.confirm("Guesss again?");
     if (playAgain) {
         playGame();
@@ -80,9 +79,8 @@ var playGame = function() {
         return;
     }
 
-    
-
 };
 
+/* To initiate game */
 playGame();
 
