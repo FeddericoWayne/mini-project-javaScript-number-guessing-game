@@ -20,7 +20,7 @@ var playGame = function() {
         return;
     } 
 
-    var playerGuess = window.prompt("Enter an Integer betwee 1 and 100");
+    var playerGuess = window.prompt("Enter an Integer between 1 and 100");
 
     /* So players can exit the game at any stage */
     if (!playerGuess) {
@@ -32,7 +32,7 @@ var playGame = function() {
     var playerNumber = Number(playerGuess);
 
     /* Computer generates random integers between 1 and 100 */
-    var computerNumber = 50; //Math.floor(Math.random()*100) + 1;
+    var computerNumber = Math.floor(Math.random()*100) + 1;
     
     /* Value comparison sequence */
 
@@ -71,7 +71,7 @@ var playGame = function() {
     };
     
     /* Allows players to guess again or quit the game */
-    var playAgain = window.confirm("Guesss again?");
+    var playAgain = window.confirm("Guess again?");
     if (playAgain) {
         playGame();
     } else {
